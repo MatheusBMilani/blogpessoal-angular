@@ -30,6 +30,7 @@ userLogin: UserLogin = new UserLogin()
     environment.nome = this.userLogin.nome
     environment.token = this.userLogin.token
 
+    this.router.navigate(['/inicio'])
   }
 
 
