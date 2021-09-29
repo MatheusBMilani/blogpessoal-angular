@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../model/User';
@@ -13,7 +14,7 @@ export class AuthService {
   ) { }
 
     entrar(UserLogin: UserLogin): Observable<UserLogin>{
-      return this.http.post<UserLogin>('https://backendblogpessoal.herokuapp.com/usuarios/logar', userLogin)
+      return this.http.post<UserLogin>('https://backendblogpessoal.herokuapp.com/usuarios/logar', UserLogin)
     }
 
     cadastrar(user: User): Observable<User>{
